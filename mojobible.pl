@@ -247,9 +247,7 @@ __DATA__
 @@ bible.html.ep
 % layout 'default';
 % title 'Bible Scholar AI';
-
 <p></p>
-
 % # Interpret
 %   if ($can_chat) {
   <form method="get">
@@ -272,7 +270,6 @@ __DATA__
   </form>
 %   }
 <p></p>
-
 % # Response
 % if ($interp) {
     <%== fix_latin($interp) %>
@@ -305,7 +302,6 @@ __DATA__
     <div id="loading">
       <img id="loading-image" src="/loading.gif" alt="Loading..." />
     </div>
-
     <div class="container padpage">
       <h3><a href="<%= url_for('bible') %>"><%= title %></a></h3>
       <%= content %>
