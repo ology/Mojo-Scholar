@@ -98,6 +98,31 @@ get '/bible' => sub ($c) {
       if $action eq 'interp';
   }
 
+  my @versions = (
+    '1611 King James Version',
+    '1789 King James Version',
+    'Douay-Rheims Version',
+    'English Standard Version',
+    "Erasmus' second edition of the Latin New Testament",
+    'Geneva',
+    'Hebrew',
+    "Jerome's 4th-century Latin Vulgate Version",
+    'Latter-day Saint edition of the King James Version',
+    'New American Standard',
+    'New English',
+    'New International Version',
+    'New King James Version',
+    'New Revised Standard Version',
+    'New Revised Standard Version, Catholic Edition',
+    'New World Translation of the Holy Scriptures',
+    'The original Greek New Testament',
+    'The Revised English',
+    'Revised Version',
+    'The Septuagint',
+    'Tyndale',
+    "Wyclif's",
+  );
+
   $c->render(
     template => 'bible',
     interp   => $interpretation,
@@ -105,6 +130,7 @@ get '/bible' => sub ($c) {
     seek     => $seek,
     mobile   => $c->browser->mobile ? 1 : 0,
     version  => $version,
+    versions => \@versions,
   );
 } => 'bible';
 
@@ -229,7 +255,7 @@ __DATA__
   <form method="get">
     <select name="version" class="form-control">
       <option value="">Bible version...</option>
-%     for my $v (('English Standard Version', 'Geneva', 'King James Version 1611', 'King James Version 1789', 'New American Standard', 'New English', 'New International Version', 'New King James Version', 'New Revised Standard Version', 'New Revised Standard Version, Catholic Edition', 'The Revised English', 'Revised Version', 'Tyndale', "Wyclif’s")) {
+%     for my $v (@$versions) {
       <option value="<%= $v %>" <%= $v eq $version ? 'selected' : '' %>><%= $v %></option>
 %     }
     </select>
