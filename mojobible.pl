@@ -179,7 +179,6 @@ sub _get_response ($role, $prompt) {
 }
 
 app->plugin('browser_detect');
-app->log->level('trace');
 
 app->start;
 
