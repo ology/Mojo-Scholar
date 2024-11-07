@@ -263,7 +263,7 @@ __DATA__
     <a type="button" href="<%= url_for('signup') %>" title="Interpret this reading" class="btn btn-info">Interpret</a>
 %     }
 %     else {
-    <button type="submit" name="action" title="Interpret this reading" value="interp" class="btn btn-info" id="interp">
+    <button type="submit" name="action" title="Interpret this reading" value="interp" class="btn btn-primary" id="interp">
       Ask</button>
 %     }
   </form>
