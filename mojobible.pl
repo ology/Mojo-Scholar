@@ -9,9 +9,6 @@ use Encoding::FixLatin qw(fix_latin);
 use JSON::MaybeXS qw(decode_json encode_json);
 use Mojo::SQLite;
 
-use lib 'lib';
-use Bible ();
-
 helper is_demo => sub ($c) { # for use in the template
   my $user = $c->session('user');
   return $user eq 'guest' ? 1 : 0;
