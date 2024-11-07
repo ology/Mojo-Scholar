@@ -148,7 +148,7 @@ READING STRUCTURE:
 - Balance mystery with clear insights
 
 ALWAYS INCLUDE:
-- Verses from the $version Bible only
+- Verses from the $version Bible ONLY
 
 ABSOLUTELY AVOID:
 - Using any preamble or introductory text
