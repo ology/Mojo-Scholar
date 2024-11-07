@@ -225,7 +225,7 @@ __DATA__
   <p></p>
   <input class="form-control" type="password_again" name="password" placeholder="Retype password" required>
   <p></p>
-  <input class="form-control btn btn-sm btn-primary" type="submit" name="submit" value="Submit">
+  <input class="form-control btn btn-primary" type="submit" name="submit" value="Submit">
 </form>
 
 @@ login.html.ep
@@ -240,7 +240,7 @@ __DATA__
   <br>
   <input class="form-control" type="password" name="password" placeholder="Password">
   <br>
-  <input class="form-control btn btn-sm btn-primary" type="submit" name="submit" value="Login">
+  <input class="form-control btn btn-primary" type="submit" name="submit" value="Login">
 </form>
 
 @@ bible.html.ep
@@ -260,10 +260,10 @@ __DATA__
     <textarea class="form-control" name="seek" placeholder="What biblical concepts do you have questions about?"><%= $seek %></textarea>
     <p></p>
 %     if (is_demo()) {
-    <a type="button" href="<%= url_for('signup') %>" title="Interpret this reading" class="btn btn-sm btn-info">Interpret</a>
+    <a type="button" href="<%= url_for('signup') %>" title="Interpret this reading" class="btn btn-info">Interpret</a>
 %     }
 %     else {
-    <button type="submit" name="action" title="Interpret this reading" value="interp" class="btn btn-sm btn-info" id="interp">
+    <button type="submit" name="action" title="Interpret this reading" value="interp" class="btn btn-info" id="interp">
       Ask</button>
 %     }
   </form>
