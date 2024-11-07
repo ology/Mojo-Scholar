@@ -82,9 +82,9 @@ under sub {
 };
 
 get '/bible' => sub ($c) {
-  my $action = $c->param('action') || '';  # user action
-  my $seek   = $c->param('seek') || '';    # user seeking
-  my $interp = $c->param('interp') || '';  # interpretation
+  my $action = $c->param('action')   || '';  # user action
+  my $seek   = $c->param('seek')     || '';  # concepts user is seeking
+  my $interp = $c->param('interp')   || '';  # do interpretation
   my $version = $c->param('version') || 'New International Version';  # bible version
 
   my $user_id = $c->session('user_id');
