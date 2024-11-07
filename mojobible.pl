@@ -302,7 +302,7 @@ __DATA__
       <img id="loading-image" src="/loading.gif" alt="Loading..." />
     </div>
     <div class="container padpage">
-      <h3><a href="<%= url_for('bible') %>"><%= title %></a></h3>
+      <h3><img src="/favicon.ico"><a href="<%= url_for('bible') %>"><%= title %></a></h3>
       <%= content %>
       <p></p>
       <div id="footer" class="small">
