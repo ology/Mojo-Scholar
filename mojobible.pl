@@ -85,7 +85,7 @@ get '/bible' => sub ($c) {
   my $action = $c->param('action')   || '';  # user action
   my $seek   = $c->param('seek')     || '';  # concepts user is seeking
   my $interp = $c->param('interp')   || '';  # do interpretation
-  my $version = $c->param('version') || 'New International Version';  # bible version
+  my $version = $c->param('version') || '1611 King James Version';  # bible version
 
   my $user_id = $c->session('user_id');
   my $sql = Mojo::SQLite->new('sqlite:bible.db');
@@ -257,7 +257,7 @@ __DATA__
 %     }
     </select>
     <p></p>
-    <textarea class="form-control" name="seek" placeholder="What biblical concepts do you have questions about?"><%= $seek %></textarea>
+    <textarea class="form-control" name="seek" placeholder="Concept or question"><%= $seek %></textarea>
     <p></p>
 %     if (is_demo()) {
     <a type="button" href="<%= url_for('signup') %>" title="Interpret this reading" class="btn btn-info">Interpret</a>
